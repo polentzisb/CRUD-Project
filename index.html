@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!---CSS Link---->
+    <link rel="stylesheet" href="./style.css">
+    <title>Crud Project</title>
+    <!---Google Fonts---->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap" rel="stylesheet"> 
+</head>
+
+
+<body>
+    <main class="crud">
+        <section class="intro">
+            <h1 class="title">
+                Crud Grocery List
+            </h1>
+        </section>
+
+
+        <section class="create-list">
+            <h2>Create ur list for shopping</h2>
+
+            <form id="grocery-form">
+                <h4>whats do u need in ur list</h4>
+                <input type="text" name="content" id="content" placeholder="E.G. Bread">
+
+                <h4>Pick a category</h4>
+				<div class="options">
+					<label>
+						<input type="radio" name="category" id="category1" value="food" /> 
+						<span class="bubble food"></span>
+						<div>Food</div>
+					</label>
+					<label>
+						<input type="radio" name="category" id="category2" value="personal" />
+						<span class="bubble personal"></span>
+						<div>Personal Stuff</div>
+					</label>
+				</div>
+
+
+
+                <input type="submit" value="add to list">
+            </form>
+        </section>
+
+
+        <section class="grocery-list">
+            <h2>Grocery List</h2>
+            <div class="list" id="grocery-list">
+                <div class="grocery-item done">
+                    <label>
+                        <input type="checkbox">
+                        <span class="bubble food"></span>
+                    </label>
+
+                    <div class="grocery-content">
+                        <!-- <input type="text" value="Milk" readonly> -->
+                    </div>
+                    <div class="actions">
+                        <button class="edit">Edit</button>
+                        <button class="delete">Delete</button>
+                    </div>
+                </div>
+            </div>    
+        </section>
+        
+    </main>
+
+
+
+   
+
+    
+    
+    
+       
+
+
+
+
+
+
+    <script src="./index.js"></script>
+</body>
+</html>

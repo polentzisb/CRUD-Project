@@ -1,0 +1,209 @@
+:root{
+    --primary-color: #fdbe83;
+    --secondary-color: #c8a3b5;
+    --blue-color: #2f4e68;
+    --light-color: #ebe1d8;
+    --glow-color: #3a0ab2;
+    --dark: black;
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inconsolata', monospace;
+
+}
+
+input:not([type="radio"]):not([type="checkbox"]), button {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: initial;
+}
+
+body {
+    background: rgb(156, 152, 152);
+    color: var(--dark);
+}
+
+section{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+h2 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+h4 {
+    font-size: 1rem;
+    color:#3a0ab2;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.intro .title {
+    display: flex;
+}
+
+.create-list input[type="text"] {
+    display: block;
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow);
+    margin-bottom: 1.4rem;
+    background-color: var(--light-color);
+}
+
+.create-list .options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.create-list .options label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    background-color: #FFF;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    display: none;
+}
+
+
+
+.bubble{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid var(--glow-color);
+    box-shadow: var(--secondary-color); 
+}
+
+.bubble.personal {
+    border-color: #c8a3b5;
+}
+
+.bubble::after {
+    content: "";
+    display: block;
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+    background-color: var(--glow-color);
+    box-shadow: var(--shadow);
+    border-radius: 50%;
+    transition: 0.2s ease-in-out;
+}
+
+
+input:checked ~ .bubble::after {
+    width: 10px;
+    height: 10px;
+    opacity: 1;
+}
+
+.create-list .options {
+    color: var(--dark);
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+.create-list input[type="submit"] {
+    display: block;
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 1rem 1.5rem;
+    color: #FFF;
+    background-color: var(--secondary-color);
+    border-radius: 0.5rem;
+    box-shadow: var(--glow-color);
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.create-list input[type="submit"]:hover {
+    opacity: 0.75;
+}
+
+.grocery-list .list {
+    margin: 1rem 0;
+}
+
+.grocery-list .grocery-item {
+    display: flex;
+    align-items: center;
+    background-color: #FFF;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow);
+    margin-bottom: 1rem;
+}
+
+.grocery-item label {
+    display: block;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.grocery-item .grocery-content{
+    flex: 1 1 0%;
+}
+
+.grocery-item .grocery-content input{
+    color: var(--black);
+    font-size: 1.2rem;
+}
+
+.grocery-item .actions {
+    display: flex;
+    align-items: center;
+}
+
+
+.grocery-item .actions button {
+    display: block;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    color: #FFF;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.grocery-item .actions button:hover{
+    opacity: 0.75;
+}
+
+.grocery-item .actions .edit {
+    margin-right: 0.5rem;
+    background-color: var(--secondary-color);
+}
+
+.grocery-item .actions .delete {
+    margin-right: 0.5rem;
+    background-color: var(--blue-color);
+}
+
+.grocery-item.done .grocery-content input {
+    text-decoration: line-through;
+    color: var(--black);
+}
