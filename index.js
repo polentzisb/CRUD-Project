@@ -1,11 +1,7 @@
-
-
 window.addEventListener('load', () => {
 	grocerys = JSON.parse(localStorage.getItem('grocerys')) || [];
 	const nameInput = document.querySelector('#name');
 	const groceryForm = document.querySelector('#grocery-form');
-
-	
 
 	groceryForm.addEventListener('submit', e => {
 		e.preventDefault();
