@@ -1,74 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!---CSS Link---->
-    <link rel="stylesheet" href="./style.css">
-    <title>Crud Project</title>
+  <link rel="stylesheet" href="./assets/style.css">
+  <title>Crud Project</title>
+    <!---Favicon--->
+  <link rel="shortcut icon" href="./assets/fav.svg" type="image/x-icon">
     <!---Google Fonts---->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap" rel="stylesheet"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap" rel="stylesheet"> 
 </head>
 
 
 <body>
-    <main class="crud">
-        <section class="intro">
-            <h1 class="title">Grocery List</h1>
-        </section>
+  <main class="crud">
+    <section class="intro">
+      <h1 class="title">Grocery List</h1>
+    </section>
 
-        <section class="create-list">
-            <h2>This Essential Grocery List is a life saver on the busy weeks. Now you can remember all the things in the market</h2>
-
-            <form id="grocery-form">
-                <h4>Insert the product</h4>
-                <input type="text" name="content" id="content" placeholder="E.G. Bread">
-
-                <h4>Pick a category</h4>
-				<div class="options">
-					<label>
-						<input type="radio" name="category" id="category1" value="food" /> 
-						<span class="bubble food"></span>
-						<div>Food</div>
-					</label>
-					<label>
-						<input type="radio" name="category" id="category2" value="personal" />
-						<span class="bubble personal"></span>
-						<div>Personal Stuff</div>
-					</label>
-				</div>
-
-
-                <input type="submit" value="add to list">
-            </form>
-        </section>
+    <section class="create-list">
+      <h2>This Essential Grocery List is a life saver on the busy weeks. Now you can remember all the things in the market</h2>
+      <form id="grocery-form">
+      <h4>Insert the product</h4>
+      <input type="text" name="content" id="content" placeholder="E.G. Bread">
+      <h4>Pick a category</h4>
+	  <div class="options">
+	    <label>
+		  <input type="radio" name="category" id="category1" value="food"/> 
+		  <span class="bubble food"></span>
+		  <div>Food</div>
+		</label>
+		<label>
+		  <input type="radio" name="category" id="category2" value="personal"/>
+		  <span class="bubble personal"></span>
+		  <div>Personal Stuff</div>
+		</label>
+	  </div>
+      <input type="submit" value="add to list">      
+    </section>
 
 
-        <section class="grocery-list">
-            <h2>Grocery List</h2>
-            <div class="list" id="grocery-list">
-                <div class="grocery-item done">
-                    <label>
-                        <input type="checkbox">
-                        <span class="bubble food"></span>
-                    </label>
-
-                    <div class="grocery-content">
-                    </div>
-                    <div class="actions">
-                        <button class="edit">Edit</button>
-                        <button class="delete">Delete</button>
-                    </div>
-                </div>
-            </div>    
-        </section>
+    <section class="grocery-list">
+      <h2>Grocery List</h2>
+      <div class="list" id="grocery-list">
+        <div class="grocery-item done">
+          <label>
+            <input type="checkbox">
+            <span class="bubble food"></span>
+          </label>
+          <div class="grocery-content"></div>
+          <div class="actions">
+            <button class="edit">Edit</button>
+            <button class="delete">Delete</button>
+          </div>
+        </div>
+      </div>    
+    </section>
         
-    </main>
+  </main>
 
-     <!---JS src---->
-    <script src="./index.js"></script>
+  <!---JS src---->
+  <script src="./index.js"></script>
 </body>
 </html>

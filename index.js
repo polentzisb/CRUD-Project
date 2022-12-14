@@ -16,10 +16,7 @@ window.addEventListener('load', () => {
 		grocerys.push(grocery);
 
 		localStorage.setItem('grocerys', JSON.stringify(grocerys));
-
-		// Reset the form
 		e.target.reset();
-
 		DisplayGrocerys()
 	})
 
@@ -82,9 +79,7 @@ function DisplayGrocerys () {
 			} else {
 				groceryItem.classList.remove('done');
 			}
-
 			DisplayGrocerys()
-
 		})
 
 		edit.addEventListener('click', (e) => {
@@ -96,7 +91,6 @@ function DisplayGrocerys () {
 				grocery.content = e.target.value;
 				localStorage.setItem('grocerys', JSON.stringify(grocerys));
 				DisplayGrocerys()
-
 			})
 		})
 
